@@ -1,0 +1,19 @@
+<script>
+   
+let numeros = new Array(5);
+
+
+for (let i = 0; i < 5; i++) {
+  numeros[i] = Number(prompt("Digite um número inteiro:"));
+
+    
+
+}
+
+let valor = numeros.sort(function(a, b) {
+  return a - b;
+});
+
+console.log("Números em ordem crescente: " + valor);
+
+</script>

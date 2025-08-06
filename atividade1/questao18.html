@@ -1,0 +1,24 @@
+<script>
+
+    let vetor = new Array(6)
+
+    for (let i = 0; i < vetor.length; i++) {
+        vetor[i] = Number(prompt("Digite um numero inteiro"))
+
+        if (vetor[i]%2 == 0 && vetor[i]%3 == 0) {
+
+            
+            console.log("os numeros multiplos de 2 e 3: " + vetor[i])
+            
+        } else if (vetor[i]%3 == 0) {
+
+            console.log("os numeros multiplos de 3: " + vetor[i])
+            
+        } else if (vetor[i]%2 == 0 ) {
+
+            console.log("os numeros multiplos de 2: " + vetor[i])
+
+        }
+        
+    }
+</script>

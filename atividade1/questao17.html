@@ -1,0 +1,25 @@
+<script>
+
+    let vetor = new Array (6)
+
+    let par = 0
+
+    let impar = 0
+
+    for (let i = 0; i < vetor.length; i++) {
+        
+        vetor[i] = Number(prompt("Digite um numero inteiro"))
+        
+        if (vetor[i]%2 == 0) {
+
+            par++
+
+            console.log("A)" +vetor[i] +"\nB) numeros parés: " + par)
+            
+        } if(vetor[i]%2 != 0){
+            impar++
+            console.log("C)" +vetor[i] +"\nD) numeros imparés: " + impar)
+        }
+        
+    }
+</script>
