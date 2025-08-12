@@ -1,0 +1,36 @@
+<script>
+
+    let alunos = new Array (7)
+
+    let media = new Array (7)
+
+    let maiorMedia = 0
+
+    let contador = 0
+
+    let recuperacao = 0
+
+    let alunoRecuperacao = "Os alunos em recuperação são: \n"
+
+    for (let index = 0; index < alunos.length; index++) {
+        alunos[index] = prompt("Digite o nome do aluno")
+
+        media[index] = Number(prompt("Digite a media do aluno"))
+
+        maiorMedia = media[0]
+
+       if (media[index] > maiorMedia) {
+
+            maiorMedia+=media[index]
+            contador = index
+        } 
+        if (media[index] < 7) {
+
+            recuperacao = 10 - media[index]
+
+            alunoRecuperacao += (`O aluno ${alunos[index]} tirou a media: ${media[index]} e preicsa tirar ${recuperacao} para passar\n`)
+
+        }
+        
+    } console.log(`${maiorMedia}, ${alunos[contador]} ${alunoRecuperacao}`)
+</script>

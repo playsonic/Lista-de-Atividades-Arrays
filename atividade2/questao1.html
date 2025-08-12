@@ -1,0 +1,44 @@
+<script>
+
+    //O meu
+
+    let carro = ["Toyota Corolla", "Volkswagen Gol", "Honda Civic", "Fiat Uno", "Chevrolet Onix"]
+
+    let consumo = [11, 9.5, 10.5, 12, 13] 
+
+    let maiorConsumo = consumo[0]
+
+    let  carroComparavel = 0
+
+    for (let index = 0; index < consumo.length; index++) {
+        
+
+        if (consumo[index] > maiorConsumo) {
+            
+            maiorConsumo = consumo[index]
+            carroComparavel = index
+            
+        }
+        
+    }  console.log(`Carro: ${carro[carroComparavel]} e seu consumo ${maiorConsumo}km/l`)
+
+
+    /*Do professor
+    let carro = ["Toyota Corolla", "Volkswagen Gol", "Honda Civic", "Fiat Uno", "Chevrolet Onix"]
+
+    let consumo = [11, 9.5, 10.5, 12, 13] 
+
+     for (let index = 0; index < consumo.length; index++) {
+        
+
+        if (consumo[index] >= consumo[consumo]) {
+            
+            consumo = consumo[i]
+            carroComparavel = index
+            
+        }
+        
+    }  console.log(`Carro: ${carro[carroComparavel]} e seu consumo ${maiorConsumo}km/l`)
+
+*/
+</script>

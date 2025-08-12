@@ -1,0 +1,42 @@
+<script>
+
+    let funcionarios = new Array (5)
+
+    let salario = new Array (5)
+
+    let tempo = new Array (5)
+
+    let resumo = "A lista de funcionários: \n"
+
+    for (let i = 0; i < funcionarios.length; i++) {
+        
+        funcionarios[i] = prompt("Digite o nome do funcionário")
+
+        salario[i] = Number(prompt("Digite o salário atual do funcionário"))
+
+        tempo[i] = Number(prompt("Digite o tempo atual do funcionário na empresa (em anos)"))
+
+        if (tempo[i] > 5 && salario[i]<800) {
+
+            resumo += (`O funcionário ${funcionarios[i]}, que está na empresa à ${tempo[i]} anos na empresa, terá um aumento de salário de R$${salario[i] += (0.35*salario[i])}\n`)
+            
+        }
+        else if (tempo[i] > 5) {
+
+            resumo += (`O funcionário ${funcionarios[i]}, que está na empresa à ${tempo[i]} anos na empresa, terá um aumento de salário de R$${salario[i] += (0.25*salario[i])}\n`) 
+
+        }
+        else if (salario[i]<800) {
+
+            resumo += (`O funcionário ${funcionarios[i]}, que está na empresa à ${tempo[i]} anos na empresa, terá um aumento de salário de R$${salario[i] += (0.15*salario[i])}\n`) 
+
+        }
+        else {
+
+            resumo += (`O funcionário ${funcionarios[i]}, que está na empresa à ${tempo[i]} anos na empresa, terá o mesmo salário de R$${salario[i]}\n`) 
+
+        }
+    } console.log(resumo)
+        
+    
+</script>

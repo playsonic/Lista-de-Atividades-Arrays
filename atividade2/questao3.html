@@ -1,0 +1,16 @@
+<script>
+
+    let numero = new Array(9)
+
+    let contador = 0
+
+    for (let i = 0; i < numero.length; i++) {
+        numero[i] = Number(prompt("Digite um numero inteiro"))
+
+        if( numero[i]%2 != 0 && numero[i]!=1) {
+
+            console.log(`O numero primo: ${numero[i]}  \nSua posição: ${i}`)
+        }
+        
+    }
+</script>

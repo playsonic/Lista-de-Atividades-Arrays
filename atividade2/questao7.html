@@ -1,0 +1,40 @@
+<script>
+
+    let produtos = new Array (10)
+
+    let codigos = new Array (10)
+
+    let precos = new Array (10)
+
+    resumo = "Os produtos da lista: \n"
+
+    for (let i = 0; i < produtos.length; i++) {
+        produtos[i] = prompt("Digite o nome do produto")
+
+        codigos[i] = Number(prompt("Digite o código do produto"))
+
+        precos[i] = Number(prompt("Digite o preço do produto"))
+
+        if (codigos[i]%2 == 0 && precos[i]>1000) {
+
+            resumo += (`O produto ${produtos[i]} terá o novo preço de R$${precos[i] += (0.20*precos[i])}\n`)
+            
+        }
+        else if (codigos[i]%2 == 0) {
+
+            resumo += (`O produto ${produtos[i]} terá o novo preço de R$${precos[i] += (0.15*precos[i])}\n`) 
+
+        }
+        else if (precos[i]>1000) {
+
+            resumo += (`O produto ${produtos[i]} terá o novo preço de R$${precos[i] += (0.10*precos[i])}\n`) 
+
+        }
+        else {
+
+            resumo += (`O produto ${produtos[i]} terá o mesmo preço de R$${precos[i]}\n`) 
+
+        }
+    } console.log(resumo)
+
+</script>

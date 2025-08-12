@@ -1,0 +1,64 @@
+<script>
+
+    let vendedor = new Array (10)
+
+    let vendas = new Array (10)
+
+    let comissao = new Array (10)
+
+    let total = 0
+
+    let maiorValor = 0 
+
+    let menorValor = 0
+
+    let maiorVendedor
+
+    let menorvendedor
+
+    for (let i = 0; i < vendedor.length; i++) {
+        vendedor[i] = prompt("Digite o nome do vendedor")
+
+        vendas[i] = Number(prompt("Digite o total das vendas"))
+
+        comissao[i] = Number(prompt("Digite a porcentagem da comissão"))
+ 
+        total += vendas[i]
+        
+        
+    }
+
+    let valorComissao = new Array (vendedor.length)
+
+
+    let resumo = "informações totais:\n"
+
+    maiorValor = valorComissao[0]
+    menorValor = valorComissao[0]
+
+for (let p = 0; p < vendedor.length; p++) {
+    valorComissao[p] = (comissao[p]/100)*vendas[p]
+    resumo += `O vendedor ${vendedor[p]} tem o total de comissão R$${valorComissao[p]}\n`
+
+     if (p === 0) {
+        
+        maiorValor = valorComissao[p];
+        menorValor = valorComissao[p];
+        maiorVendedor = p;
+        menorvendedor = p;
+    } else {
+    
+    if (valorComissao[p] < menorValor) {
+        menorValor = valorComissao[p]
+        menorvendedor = p
+    }
+
+    if (valorComissao[p] > maiorValor) {
+        maiorValor = valorComissao[p]
+        maiorVendedor = p
+    }
+}
+}
+
+    console.log(`${resumo}O total das vendas: ${total} \nO vendedor ${vendedor[maiorVendedor]} vai receber R$${maiorValor} da comissão \nO vendedor ${vendedor[menorvendedor]} vai receber R$${menorValor} da comissão`)
+</script>

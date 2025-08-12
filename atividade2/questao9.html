@@ -1,0 +1,27 @@
+<script>
+
+    let a = new Array (20)
+
+    let b = new Array (20)
+
+    let complementar = 0
+
+   for (let index = 0; index < a.length; index++) {
+        a[index] = Number(prompt("Digite o numero " + (index+1) + "° " + "Do elemento A"))
+        
+        b[index] = Number(prompt("Digite o numero " + (index+1) + "° " + "Do elemento B"))
+    }
+
+
+    for (let i = (a.length-1); i >= 0; i--) {
+        complementar = a[i]
+
+        a[i] = b[i]
+
+        b[i] = complementar
+        
+        console.log(`Os itens do elemento A ${a[i]}, Os itens do elemento B ${complementar}`)
+    }
+
+
+</script>

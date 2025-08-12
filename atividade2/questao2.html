@@ -1,0 +1,47 @@
+<script>
+
+    let alunos = new Array (10)
+
+    let gabarito = new Array (8)
+
+    let respostas = new Array (8)
+
+    let nota = new Array (10)
+    
+    let contador = 0
+
+      for (let i = 0; i < gabarito.length; i++) {
+                gabarito[i] = prompt("Digite o gabarito da questão " + (i+1))
+                nota[i] = 0
+            }
+
+            
+    
+    for (let index = 0; index < alunos.length; index++) {
+        alunos[index] = Number(prompt("Digite o numero do aluno"))
+
+        
+       
+        
+        for (let z = 0; z < respostas.length; z++) {
+            respostas[z] = prompt("Digite a resposta do aluno para a questão " + (z+1))
+
+            if (respostas[z] == gabarito[z]) {
+
+                nota[index]++
+                
+            }
+            
+            
+        }
+         if (nota[index] >= 6) {
+
+            contador++
+        }
+
+        
+      console.log(`O numero do aluno: ${alunos[index]} \nNota do mesmo: ${nota[index]} \nporcentagem da aprovação: %${((contador*100)/10).toFixed(2)}`)  
+    } 
+
+     
+</script>

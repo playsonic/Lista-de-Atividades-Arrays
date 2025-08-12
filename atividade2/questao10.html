@@ -1,0 +1,30 @@
+<script>
+
+    let dividendo = new Array (10)
+
+    let divisor = new Array (5)
+
+    for (let i = 0; i < dividendo.length; i++) {
+        dividendo[i] = Number(prompt("Digite um numero inteiro (Dividendo)"))
+
+        divisor[i] = Number(prompt("Digite um numero inteiro (Divisor)"))
+
+    }
+
+    let resumo = "O resultado : \n"
+
+    for (let index = 0; index < dividendo.length; index++) {
+
+        resumo += (`O número ${dividendo[index]}:\n`)
+        
+        for (let o = 0; o < dividendo.length; o++) {
+            
+            if ((dividendo[index]%divisor[o]) == 0) {
+
+                resumo+= (`É divisível por ${divisor[o]} na posição ${o}\n`)
+                
+            } 
+        }
+        
+    } console.log(resumo)
+</script>

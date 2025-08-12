@@ -1,0 +1,59 @@
+<script>
+
+    let produto = new Array (10)
+
+    let quantidade = new Array (10)
+
+    let resumo
+
+    for (let index = 0; index < produto.length; index++) {
+        produto[index] = Number(prompt("Digite o codigo do produto"))
+
+        quantidade[index] = Number(prompt("Digite a quantidade do produto "))
+        
+    }
+
+    
+    while (true) {
+
+        let codigoTeste = Number(prompt("Digite 1 para continuar e 0 para parar")) ;
+
+        if (codigoTeste === 0) break; {
+
+        let codigo = Number(prompt("Digite o codigo do produto que deseja comprar"))
+
+        let codigoQuantidade = Number(prompt("Digite a quantidade que deseja"))
+
+        let teste = produto.indexOf(codigo)
+
+        if (teste === -1) {
+
+            alert("Codigo não existe!")
+            
+        } 
+        
+        else if (quantidade[codigo] < codigoQuantidade) {
+
+            alert("Não temos estoque suficiente dessa mercadoria.")
+
+        }
+
+        else {
+
+            alert("Pedido atendido. Obrigado e volte sempre")
+            quantidade[teste] -= codigoQuantidade 
+        }
+
+        }
+
+       }
+         resumo = "Estoque atualizado:\n";
+  for (let i = 0; i < produto.length; i++) {
+    resumo += `Produto (código ${produto[i]}): ${quantidade[i]} unidades\n`;
+  }
+
+  alert(resumo);
+
+
+
+</script>
